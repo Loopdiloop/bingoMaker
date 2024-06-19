@@ -2,10 +2,10 @@ FROM ubuntu:18.04
 LABEL maintainer="marianne.bjoroen@avella.no"
 WORKDIR /usr/local/
 
-RUN  apt-get -y update && apt-get -y install texlive-latex-base
-RUN apt-get -y install texlive-fonts-recommended 
+RUN apt-get -y update && apt-get -y install git
+RUN apt-get -y install texlive-latex-base && apt-get -y install texlive-fonts-recommended 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install texlive-latex-extra
-RUN apt-get -y install git
+
 
 
 # Make folder and add the bingo-files
